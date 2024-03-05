@@ -1,0 +1,15 @@
+<!-- {{data}}
+<ul>
+  <li [routerLink]="['/remote']">MicroFrontend</li>
+  <li [routerLink]="['remote1']">MicroFrontend1</li>
+</ul>
+<lib-my-shared></lib-my-shared>
+
+<button (click)="test()">点击获取子应用的数据</button> -->
+
+<h3>主应用</h3>
+<button class="button" (click)="goToShell()" style="margin-bottom: 20px;">GoToShell</button>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
