@@ -35,6 +35,18 @@ const routes: Routes = [
             return m.MicrofrontendModule;
           }),
       },
+      {
+        path: 'mfe2',
+        loadChildren: () =>
+          loadRemoteModule({
+            remoteEntry: 'http://localhost:3002/remoteEntry.js',
+            remoteName: 'mfe2',
+            exposedModule: './Module1',
+          }).then((m) => {
+            console.log(m);
+            return m.Microfrontend1Module;
+          }),
+      },
     ],
   },
 ];
