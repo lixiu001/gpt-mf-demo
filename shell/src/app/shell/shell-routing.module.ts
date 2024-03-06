@@ -4,13 +4,15 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { LoadRemoteGuard } from './guards/load-remote.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    // canActivate: [LoadRemoteGuard],
     children: [
-      {
+      {  
         path: '',
         component: HomeComponent,
       },
@@ -27,6 +29,7 @@ const routes: Routes = [
       },
       {
         path: 'mfe1',
+        // canActivate: [LoadRemoteGuard],
         loadChildren: () =>
           loadRemoteModule({
             remoteEntry: 'http://localhost:3001/remoteEntry.js',
@@ -44,7 +47,7 @@ const routes: Routes = [
             remoteName: 'mfe2',
             exposedModule: './Module1',
           }).then((m) => {
-            console.log(m);
+            console.log(111,m);
             return m.Microfrontend1Module;
           }),
       },

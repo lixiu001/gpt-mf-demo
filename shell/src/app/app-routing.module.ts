@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shell/page-not-found/page-not-found.component';
 import { AuthGuard } from './shell/guards/auth.guard';
+import { LoadRemoteGuard } from './shell/guards/load-remote.guard';
 
 const routes: Routes = [
   {
