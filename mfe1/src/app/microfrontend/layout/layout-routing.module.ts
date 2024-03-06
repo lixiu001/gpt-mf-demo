@@ -13,7 +13,7 @@ const routes: Routes = [
           import('../task/task.module').then(
             (m) => m.TaskModule
           ),
-        pathMatch: 'full',
+        pathMatch: 'prefix',
       }
     ]
   },

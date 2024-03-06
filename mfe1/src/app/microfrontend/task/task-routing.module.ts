@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TaskComponent } from './task.component';
 import { ListComponent } from './list/list.component';
+import { TaskContentComponent } from './task-content/task-content.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,12 @@ const routes: Routes = [
     children:[{
       path:'',
       component: ListComponent,
-    }]
+    },
+    {
+      path:'detail',
+      component: TaskContentComponent,
+    }
+  ]
   },
 ];
 

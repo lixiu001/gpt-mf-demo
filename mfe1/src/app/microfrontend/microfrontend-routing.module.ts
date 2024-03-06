@@ -10,7 +10,7 @@ const routes: Routes = [
       import('./layout/layout.module').then(
         (m) => m.LayoutModule
       ),
-    pathMatch: 'full',
+    pathMatch: 'prefix',
   },
   {
     path: 'home',

@@ -62,8 +62,20 @@ module.exports = {
         'my-shared': {  
           singleton: true,  
           strictVersion: true,
-          import: 'my-shared', // 对应库的npm包名或本地路径  
-          requiredVersion: '*' // 或者具体的版本号，如"0.0.1"  
+          import: 'my-shared', 
+          requiredVersion: '*'
+        },  
+        'dynamic-core': {  
+          singleton: true,  
+          strictVersion: true,
+          import: 'dynamic-core', 
+          requiredVersion: '*' 
+        },  
+        'dynamic-components': {  
+          singleton: true,  
+          strictVersion: true,
+          import: 'dynamic-components', 
+          requiredVersion: '*' 
         },  
         ...sharedMappings.getDescriptors(),
       }),

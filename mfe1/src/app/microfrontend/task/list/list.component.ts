@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'remote-list',
@@ -11,14 +12,16 @@ export class ListComponent implements OnInit {
     { title: 'Task 2', description: 'Description for Task 2' ,id:'2'},
   ];
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,  
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     
   }
 
   goToDetail(id:string):void {
-    
+    this.router.navigate(['./detail'],{relativeTo:this.route})
   }
-
 }

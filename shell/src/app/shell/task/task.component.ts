@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shell-task',
@@ -12,13 +13,15 @@ export class TaskComponent implements OnInit {
     // 其他任务...
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   loadRemoteModule(id:string):void  {
-
+    this.router.navigate(['/mef1'])
   }
 
 }

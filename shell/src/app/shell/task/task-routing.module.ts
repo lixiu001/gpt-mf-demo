@@ -6,7 +6,8 @@ const routes: Routes = [{
   path:'',
   pathMatch: 'prefix',
   component: TaskComponent,
-}];
+},
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

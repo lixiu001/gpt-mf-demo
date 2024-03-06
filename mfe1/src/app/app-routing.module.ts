@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./microfrontend/microfrontend.module').then(
         (m) => m.MicrofrontendModule
       ),
-    pathMatch: 'full',
+    pathMatch: 'prefix',
   },
 ];
 
@@ -16,4 +16,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
