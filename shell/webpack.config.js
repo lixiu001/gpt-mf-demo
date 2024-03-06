@@ -10,8 +10,9 @@ sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
 
 module.exports = {
   output: {
-    uniqueName: "主工程",
+    uniqueName: 'shell',
     publicPath: "auto",
+    // publicPath: "http://localhost:3000/",
   },
   optimization: {
     runtimeChunk: false,
@@ -30,11 +31,13 @@ module.exports = {
       //     './Component': './/src/app/app.component.ts',
       // },
       // For hosts (please adjust)
+      name: "shell",
+      library: { type: "var", name: "shell" },
+      remoteType: "var",
       remotes: {
         mfe1: "mfe1@http://localhost:3000/remoteEntry.js",
         mfe2: "mfe2@http://localhost:7000/remoteEntry.js",
       },
-
       shared: share({
         "@angular/core": {
           singleton: true,

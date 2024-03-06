@@ -1,0 +1,25 @@
+
+<h1>Shell主应用-Home Module</h1>
+<button class="button" (click)="goToShell()" style="margin-bottom: 20px;">返回主应用</button>
+
+<div >
+  <h1>我的待办</h1>
+  <ul class="todo">
+    <li (click)="goToTask('1')">近日需完成</li>
+    <li (click)="goToTask('2')">可提前处理 </li>
+    <li (click)="goToTask('3')">已完成 </li>
+  </ul>
+</div>
+
+<div class="container">
+  <h1>我的应用</h1>
+  <div class="task-card-list">
+    <div *ngFor="let task of tasks" class="task-card" (click)="loadRemoteModule(task.modulePath)">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+    </div>
+  </div>
+</div>
+
+
+

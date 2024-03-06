@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'remote-layout',
@@ -6,7 +7,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit, OnDestroy {
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     console.log(this);
@@ -17,6 +20,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     console.log('Remote LayoutComponent Destroy');
   }
   goToRemote1():void {
+    this.router.navigate(['']);
 
   }
 

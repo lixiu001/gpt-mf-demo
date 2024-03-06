@@ -1,23 +1,22 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RemoteModuleLoaderService } from '../service/remote-module-loader.service';
-import { loadRemoteModule } from '@angular-architects/module-federation';
-import { ActivatedRoute,  Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   tasks = [
-    { title: 'CRR', description: 'Description for Task CRR' ,modulePath:'/remote'},
-    { title: 'DAP', description: 'Description for Task DAP' ,modulePath:'/remote1'},
+    { title: '到款认领', description: 'Description for CRR', modulePath: '/mfe1' },
+    { title: '财务新应用', description: 'Description for DAP', modulePath: '/mfe2' },
   ];
 
   constructor(
-    private router: Router ,
+    private router: Router,
     private route: ActivatedRoute,
-    private remoteModuleLoaderService: RemoteModuleLoaderService) {}
+    private remoteModuleLoaderService: RemoteModuleLoaderService) { }
   ngOnInit(): void {
     console.log('Shell HomeComponent Init');
   }
@@ -37,5 +36,15 @@ export class HomeComponent implements OnInit,OnDestroy {
     //   return m.MicrofrontendModule;
     // })
     this.router.navigate([modulePath]);
+  }
+
+  goToTask(id: string) {
+    console.log(111);
+    
+    this.router.navigate(['/task'], { relativeTo: this.route });
+  }
+
+  goToShell(): void {
+    this.router.navigate([''])
   }
 }

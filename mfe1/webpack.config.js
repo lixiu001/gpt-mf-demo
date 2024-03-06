@@ -12,6 +12,11 @@ module.exports = {
   output: {
     uniqueName: "mfe1",
     publicPath: "auto",
+    // publicPath: "http://localhost:3001/",
+    // 输出文件名
+    // filename: '[name].js',
+    // 输出路径
+    // path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
     runtimeChunk: false,
@@ -25,17 +30,17 @@ module.exports = {
     new ModuleFederationPlugin({
       // For remotes (please adjust)
       name: "mfe1",
+      library: { type: "var", name: "mfe1" },
       filename: "remoteEntry.js",
       exposes: {
         "./Module": "./src/app/microfrontend/microfrontend.module.ts",
+        // './TaskModule': './src/app/microfrontend/task/task.module.ts',
+        // './component': "./mfe1/component"
       },
-
       // For hosts (please adjust)
       // remotes: {
       //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-
       // },
-
       shared: share({
         "@angular/core": {
           singleton: true,

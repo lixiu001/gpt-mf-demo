@@ -1,0 +1,4 @@
+<div *ngFor="let task of tasks" class="task-card" (click)="loadRemoteModule(task.modulePath)">
+  <h3>{{ task.title }}</h3>
+  <p>{{ task.description }}</p>
+</div>
