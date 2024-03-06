@@ -35,13 +35,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     //   console.log(m);
     //   return m.MicrofrontendModule;
     // })
+    console.log(modulePath);
     this.router.navigate([modulePath]);
   }
 
   goToTask(id: string) {
     console.log(111);
-    
-    this.router.navigate(['/task'], { relativeTo: this.route });
+    this.router.navigate(['/task']);
   }
 
   goToShell(): void {

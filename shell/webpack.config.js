@@ -31,9 +31,9 @@ module.exports = {
       //     './Component': './/src/app/app.component.ts',
       // },
       // For hosts (please adjust)
-      name: "shell",
-      library: { type: "var", name: "shell" },
-      remoteType: "var",
+      // name: "shell",
+      // library: { type: "module", name: "shell" },
+      // remoteType: "module",
       remotes: {
         mfe1: "mfe1@http://localhost:3001/remoteEntry.js",
         mfe2: "mfe2@http://localhost:3002/remoteEntry.js",

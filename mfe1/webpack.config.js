@@ -30,7 +30,7 @@ module.exports = {
     new ModuleFederationPlugin({
       // For remotes (please adjust)
       name: "mfe1",
-      library: { type: "var", name: "mfe1" },
+      library: { type: "module", name: "mfe1" },
       filename: "remoteEntry.js",
       exposes: {
         "./Module": "./src/app/microfrontend/microfrontend.module.ts",

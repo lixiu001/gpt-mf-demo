@@ -13,6 +13,7 @@ const routes: Routes = [
         return m.ShellModule;
       }),
   },
+  // { path: 'mef1', loadChildren: () => import('mef1/Module').then(m => m.BasketModule) },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -7,24 +7,19 @@ import { LoadRemoteGuard } from './guards/load-remote.guard';
 
 const routes: Routes = [
   {
-    path: '', // 修改根路径为非空路径
-    // pathMatch: 'full',
+    path: '',
     component: LayoutComponent,
     children: [
       {
         path: '',
-        // pathMatch: 'full',
-        redirectTo: '/home',
         component: HomeComponent,
       },
       {
         path: 'home',
-        pathMatch: 'prefix',
         component: HomeComponent,
       },
       {
         path: 'task',
-        // pathMatch: 'prefix',
         loadChildren: () =>
           import('./task/task.module').then((m) => {
             return m.TaskModule;
@@ -32,8 +27,6 @@ const routes: Routes = [
       },
       {
         path: 'mfe1',
-        // pathMatch: 'prefix',
-        // canLoad: [LoadRemoteGuard], // 将守卫加载到这里
         loadChildren: () =>
           loadRemoteModule({
             remoteEntry: 'http://localhost:3001/remoteEntry.js',
@@ -45,7 +38,6 @@ const routes: Routes = [
       },
       {
         path: 'mfe2',
-        // pathMatch: 'prefix',
         loadChildren: () =>
           loadRemoteModule({
             remoteEntry: 'http://localhost:3002/remoteEntry.js',
