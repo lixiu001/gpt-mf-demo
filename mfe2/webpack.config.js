@@ -38,6 +38,7 @@ module.exports = {
       // },
 
       shared: share({
+        'assets/img': { eager: true },
         "@angular/core": {
           singleton: true,
           strictVersion: true,

@@ -42,6 +42,7 @@ module.exports = {
       //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
       // },
       shared: share({
+        'assets/img': { eager: true },
         "@angular/core": {
           singleton: true,
           strictVersion: true,

@@ -1,0 +1,13 @@
+{
+  "*": {
+    "apps": [
+      {
+        "name": "crr",
+        "activeRule": ["/crr"],
+        "entry": "@CRR_WEB_SERVICE_URL@/remoteEntry.js",
+        "exposedModule": "./RemoteModule",
+        "remoteModule": "RemoteModule"
+      }
+    ]
+  }
+}

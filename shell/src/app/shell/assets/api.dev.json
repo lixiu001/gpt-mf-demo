@@ -1,0 +1,21 @@
+{
+  "apiUrl": "http://iia-test.apps.digiwincloud.com.cn",
+  "crrApiUrl": "https://crr-test.apps.digiwincloud.com.cn",
+  "iamUrl": "https://iam-test.digiwincloud.com.cn",
+  "emcUrl": "https://emc-test.digiwincloud.com.cn",
+  "omUrl": "https://om-test.digiwincloud.com.cn",
+  "consoleUrl": "https://console-test.digiwincloud.com.cn",
+  "marketUrl": "https://market-test.digiwincloud.com.cn",
+  "omcUrl": "https://omc-test.digiwincloud.com.cn",
+  "gmcUrl": "https://gmc-test.digiwincloud.com.cn",
+  "cacUrl": "https://cac-test.digiwincloud.com.cn",
+  "frUrl": "https://dap-rpt.apps.digiwincloud.com.cn",
+  "dmcUrl": "https://dmc-test.digiwincloud.com.cn",
+  "screenUrl": "https://dwdashboard.apps.digiwincloud.com.cn",
+  "analytics": {
+    "gtm": "@ANALYTICS_GTM@",
+    "baidu": "@ANALYTICS_BAIDU@"
+  },
+  "multiTenant": "true",
+  "dwAppSecret": "@DW_APP_SECRET@"
+}
