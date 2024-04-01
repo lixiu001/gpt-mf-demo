@@ -1,5 +1,5 @@
-<div class="task-card-list">
-  <div *ngFor="let task of tasks" class="task-card" (click)="goToDetail(task.id)">
+<div class="task-card-list" [@filterAnimation]="'-1'">
+  <div *ngFor="let task of tasks" class="task-card" (click)="goToDetail(task.id)" >
     <h3>{{ task.title }}</h3>
     <img src="assets/img/appealed.png" alt="" srcset="">
     <p>{{ task.description }}</p>
